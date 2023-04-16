@@ -1,0 +1,5 @@
+var cell3 = row.insertCell(2);
+cell3.innerHTML = '<button type="button" onclick="productDelete(this);"class="btn btn-default">X</button>';
+function productDelete() {
+    document.getElementById("myTable").deleteRow(myTable.rowIndex);
+}

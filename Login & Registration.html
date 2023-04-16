@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="UserForm/Style.css"
+        />
+        <link rel="stylesheet" href="SignIn &SignUp/Styles.css" />
+        <link rel="icon" type="image/x-icon" href="Images/blood-donation.png" />
+        <title>signin-signup</title>
+    </head>
+    <body>
+        <div class="container">
+        <div class="signin-signup">
+            <form action="" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input id="username" type="text" placeholder="Username" required />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                required
+                />
+            </div>
+            <input type="button" class="btn" value="Login" onclick="getInfo()" />
+            <p class="account-text">
+                Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a>
+            </p>
+            </form>
+            <form action="" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input id="username" type="text" placeholder="Username" required />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input id="email" type="email" placeholder="Email" required />
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input id="pass" type="password" placeholder="Password" required />
+            </div>
+            <br />
+            <div class="radio-wrapper">
+                <p>Choose Your State</p>
+                <div class="radio-container">
+                <input
+                    checked="checked"
+                    type="radio"
+                    name="State"
+                    value="1"
+                    id="doner"
+                />
+                <label for="doner">Doner</label>
+                <input type="radio" name="State" value="0" id="patient" />
+                <label for="patient">Patient</label>
+                </div>
+            </div>
+            <br />
+
+            
+
+            <input type="button" value="Sign up" class="btn" onclick="CheckMeReg() ">
+            <!-- <button class="btn" onclick="CheckMeReg()">Sign up</button> -->
+
+
+
+
+
+
+
+            <p class="account-text">
+                Already have an account? <a href="#" id="sign-in-btn2">Sign in</a>
+            </p>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+            <div class="content">
+                <h3>Already signed?</h3>
+                <button class="btn" id="sign-in-btn">Sign in</button>
+            </div>
+            </div>
+            <div class="panel right-panel">
+            <div class="content">
+                <h3>New to our community?</h3>
+                <button class="btn" id="sign-up-btn">Sign up</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <script src="SignIn &SignUp/app.js"></script>
+    </body>
+</html>

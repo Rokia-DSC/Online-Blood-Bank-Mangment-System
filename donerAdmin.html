@@ -1,0 +1,394 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
+        />
+        <link rel="stylesheet" href="css/sidebar.css" />
+        <link rel="stylesheet" href="css/body.css" />
+        <link rel="stylesheet" href="bloodscreens/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="Images/blood-donation.png" />
+        <title>Doner Admin</title>
+    </head>
+    <body>
+        <!--start navbar-->
+        <div class="bs-example">
+        <nav
+            style="background-color: #ff0018"
+            class="navbar navbar-expand-md navbar-dark fixed-top"
+        >
+            <a href="home.html" class="navbar-brand"
+            ><i class="fas fa-heartbeat"></i>Blood Bank Management</a
+            >
+            <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarCollapse"
+            >
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto"></ul>
+            </div>
+            </div>
+        </nav>
+        </div>
+        <!--end navbar-->
+        <!--Start SideBar-->
+        <br />
+        <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+            <li>
+                <a style="text-decoration: none" href="home.html"
+                ><i class="fas fa-home"></i>Home</a
+                >
+            </li>
+            <li>
+                <a style="text-decoration: none" href="donerAdmin.html"
+                ><i class="fas fa-user"></i>Donor</a
+                >
+            </li>
+            <li>
+                <a style="text-decoration: none" href="patient.html"
+                ><i class="fas fa-user-injured"></i>Patient</a
+                >
+            </li>
+            <li>
+                <a style="text-decoration: none" href="donation.html"
+                ><i class="fas fa-hand-holding-medical"></i>Donations</a
+                >
+            </li>
+            <li>
+                <a style="text-decoration: none" href="bloodRequests.html"
+                ><i class="fas fa-sync-alt"></i>Blood Requests</a
+                >
+            </li>
+            <li>
+                <a style="text-decoration: none" href="requesthistory.html"
+                ><i class="fas fa-history"></i>Request History</a
+                >
+            </li>
+            <li>
+                <a style="text-decoration: none" href="bloodStock.html"
+                ><i class="fas fa-hand-holding-water"></i>Blood Stock</a
+                >
+            </li>
+            </ul>
+        </div>
+        </div>
+        <!--End SideBar-->
+        <br /><br /><br /><br />
+        <div class="container">
+        <h3 class="text-center" style="color: #ff0018; font-weight: bold">
+            Doner Details
+        </h3>
+        <hr class="hr" />
+        <div class="table-responsive">
+            <table
+            class="table table-light table-hover table-bordered table-striped"
+            >
+            <thead class="bg-primary">
+                <tr>
+                <th scope="col" class="text-center" style="color: white">
+                    First Name
+                </th>
+                <th scope="col" class="text-center" style="color: white">
+                    Last Name
+                </th>
+                <th scope="col" class="text-center" style="color: white">
+                    National Id
+                </th>
+                <th scope="col" class="text-center" style="color: white">
+                    Phone Number
+                </th>
+                <th scope="col" class="text-center" style="color: white">
+                    Birth Of Date (BOD)
+                </th>
+                <th scope="col" class="text-center" style="color: white">
+                    Weight
+                </th>
+                <th scope="col" class="text-center" style="color: white">
+                    Address
+                </th>
+                <th scope="col" class="text-center" style="color: white">
+                    Gender
+                </th>
+                <th class="text-center" style="color: white">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Ahmed</td>
+                <td>Mohamed</td>
+                <td>302071312559454</td>
+                <td>01098202342</td>
+                <td>9-7-2002</td>
+                <td>78 kg</td>
+                <td>Shorouk</td>
+                <td>Male</td>
+                <td class="text-center">
+                    <button
+                    class="btn btn-outline-primary badge-pill"
+                    style="width: 150px"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >EDIT</a
+                    >
+                    </button>
+                    <button
+                    class="btn badge-pill"
+                    style="width: 150px; background-color: #ff0018"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >DELETE</a
+                    >
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                <td>Osama</td>
+                <td>Mohamed</td>
+                <td>30285531500554</td>
+                <td>01015487529</td>
+                <td>3-7-2002</td>
+                <td>65 kg</td>
+                <td>Shorouk</td>
+                <td>Male</td>
+                <td class="text-center">
+                    <button
+                    class="btn btn-outline-primary badge-pill"
+                    style="width: 150px"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >EDIT</a
+                    >
+                    </button>
+                    <button
+                    class="btn badge-pill"
+                    style="width: 150px; background-color: #ff0018"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >DELETE</a
+                    >
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                <td>Rokia</td>
+                <td>Darwish</td>
+                <td>3020713101597</td>
+                <td>01257614852</td>
+                <td>10-3-2001</td>
+                <td>78 kg</td>
+                <td>Nasr City</td>
+                <td>Female</td>
+                <td class="text-center">
+                    <button
+                    class="btn btn-outline-primary badge-pill"
+                    style="width: 150px"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >EDIT</a
+                    >
+                    </button>
+                    <button
+                    class="btn badge-pill"
+                    style="width: 150px; background-color: #ff0018"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >DELETE</a
+                    >
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                <td>Mostafa</td>
+                <td>Moatafa</td>
+                <td>3020713014785</td>
+                <td>01278132453</td>
+                <td>31-10-2001</td>
+                <td>70 kg</td>
+                <td>Maadi</td>
+                <td>Male</td>
+                <td class="text-center">
+                    <button
+                    class="btn btn-outline-primary badge-pill"
+                    style="width: 150px"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >EDIT</a
+                    >
+                    </button>
+                    <button
+                    class="btn badge-pill"
+                    style="width: 150px; background-color: #ff0018"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >DELETE</a
+                    >
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                <td>Kamal</td>
+                <td>Sherif</td>
+                <td>3020795562222</td>
+                <td>012781555583</td>
+                <td>10-10-1997</td>
+                <td>112 kg</td>
+                <td>10th</td>
+                <td>Male</td>
+                <td class="text-center">
+                    <button
+                    class="btn btn-outline-primary badge-pill"
+                    style="width: 150px"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >EDIT</a
+                    >
+                    </button>
+                    <button
+                    class="btn badge-pill"
+                    style="width: 150px; background-color: #ff0018"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >DELETE</a
+                    >
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                <td>Mohamed</td>
+                <td>Adel</td>
+                <td>25555222562222</td>
+                <td>01222555573</td>
+                <td>18-4-2002</td>
+                <td>77 kg</td>
+                <td>Giza</td>
+                <td>Male</td>
+                <td class="text-center">
+                    <button
+                    class="btn btn-outline-primary badge-pill"
+                    style="width: 150px"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >EDIT</a
+                    >
+                    </button>
+                    <button
+                    class="btn badge-pill"
+                    style="width: 150px; background-color: #ff0018"
+                    >
+                    <a
+                        style="
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                        "
+                        href=""
+                        >DELETE</a
+                    >
+                    </button>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+        ></script>
+    </body>
+    </html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Info</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css.map'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/all.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='UserForm/Style.css'>
+  <link rel="icon" type="image/x-icon" href="Images/blood-donation.png">
+</head>
+<body>
+  <div class="Container">
+    <div align="center" class="container mt-5">
+      <div class="card" style="width: 70%; ">
+        <form>
+          <!-- Card header -->
+          <div class="card-header" style="background-color: brown;">
+            <h4 class="fw-bold" style="text-align: center; color: white;">patient's Info</h4>
+          </div>
+          <!-- Card body -->
+          <div class="card-body">
+            <form onsubmit="myfunc(event)">
+              <div>
+                <div class="mb-3">
+                  <!-- <label for="exampleInput2" class="form-label">First Name</label> -->
+                  <input type="text" class="form-control" id="fmane" name="fmane" placeholder="First Name" />
+                </div>
+              </div>
+              <div>
+                <div class="mb-3">
+                  <!-- <label for="exampleInput3" class="form-label">Last Name</label> -->
+                  <input type="text" class="form-control" id="lname" name="lmane" placeholder="Last Name" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <!-- <label for="exampleInput12" class="form-label">National Id:</label> -->
+                <input type="text" class="form-control" id="nid" name="nid" placeholder="National Id" />
+              </div>
+              <div>
+                <div class="mb-3">
+                  <!-- <label for="exampleInput2" class="form-label">Email address</label> -->
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email address" />
+                </div>
+              </div>
+              <div>
+                <div class="mb-3">
+                  <!-- <label for="exampleInput3" class="form-label">Phone number</label> -->
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone number" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <!-- <label for="exampleInput4" class="form-label">Date of birth:</label> -->
+                <input type="date" class="form-control" id="bdate" name="bdate" placeholder="Date of birth" />
+              </div>
+              <div>
+                <div class="mb-3">
+                  <!-- <label for="exampleInput9" class="form-label">Weight in Kg</label> -->
+                  <input type="number" class="form-control" id="weight" name="weight" placeholder="Weight in Kg" />
+                </div>
+              </div>
+              <div>
+                <div class="mb-3">
+                  <!-- <label for="exampleInput6" class="form-label">Address</label> -->
+                  <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                </div>
+              </div>
+              <div class="radio-wrapper">
+                <p>GENDER</p>
+                <div class="radio-container">
+                  <input checked="checked" type="radio" name="gender" value="male" id="male" />
+                  <label for="male">MALE</label>
+                  <input type="radio" name="gender" value="female" id="female" />
+                  <label for="female">FEMALE</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Card footer -->
+          <div class="card-footer">
+            <input class="btn" id="Abtn" type="button" value="Submit" id="button" onclick="alert('Submit Successfully')">
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+<script type="text/javascript">
+  function getValue() {
+    var genderr = document.getElementsByName("gender");
+  }
+  function myfunc(event) {
+    event.preventDefault();
+    var firstname = document.getElementById("fmane").value;
+    var lastname = document.getElementById("lname").value;
+    var ssn = document.getElementById("nid").value;
+    var mail = document.getElementById("email").value;
+    var tele = document.getElementById("phone").value;
+    var birthDate = document.getElementById("bdate").value;
+    var kg = document.getElementById("weight").value;
+    var location = document.getElementById("address").value;
+    // window.localStorage.setItem('user', JSON.stringify(person));
+    window.localStorage.setItem("FirstName", firstname);
+    window.localStorage.setItem("LastName", ssn);
+    window.localStorage.setItem("E-mail", mail);
+    window.localStorage.setItem("PhoneNum", tele);
+    window.localStorage.setItem("BirthDate", birthDate);
+    window.localStorage.setItem("Weight", kg);
+    window.localStorage.setItem("Address", location);
+  }
+  var list1 = [];
+  var list2 = [];
+  var list3 = [];
+  var list4 = [];
+  var list5 = [];
+  var list6 = [];
+  var list7 = [];
+  var list8 = [];
+  //var list9=[];
+  var n = 0;
+  var x = 0;
+
+  function Addrow() {
+    var AddRown = document.getElementById('show');
+    var NewRow = AddRown.insertRow(n);
+    list1[x] = document.getElementById("fmane").value;
+    list2[x] = document.getElementById("lname").value;
+    list3[x] = document.getElementById("nid").value;
+    list4[x] = document.getElementById("email").value;
+    list5[x] = document.getElementById("phone").value;
+    list6[x] = document.getElementById('bdate').value;
+    list7[x] = document.getElementById("weight").value;
+    list8[x] = document.getElementById("address").value;
+    //list9[x]= document.getElementsByName('gender').chacked;
+    var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+    var cel3 = NewRow.insertCell(2);
+    var cel4 = NewRow.insertCell(3);
+    var cel5 = NewRow.insertCell(4);
+    var cel6 = NewRow.insertCell(5);
+    var cel7 = NewRow.insertCell(6);
+    var cel8 = NewRow.insertCell(7);
+    var cell9 = NewRow.insertCell(8);
+    //var cel9 =NewRow.insertCell(8);
+    cel1.innerHTML = list1[x];
+    cel2.innerHTML = list2[x];
+    cel3.innerHTML = list3[x];
+    cel4.innerHTML = list4[x];
+    cel5.innerHTML = list5[x];
+    cel6.innerHTML = list6[x];
+    cel7.innerHTML = list7[x];
+    cel8.innerHTML = list8[x];
+    cell9.innerHTML = '<button type="button"  onclick="productDelete(this);"class="btn">X</button>';
+    //cel9.innerHTML=list9[x];
+    n++;
+    x++;
+    // return location.href='patient.html';
+  }
+</script>
+<script src="bd.js"></script>
+
+</html>

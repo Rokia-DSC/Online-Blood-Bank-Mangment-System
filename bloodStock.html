@@ -1,0 +1,233 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css.map">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="bloodscreens/style.css">
+  <link rel="stylesheet" href="bloodscreens/StockStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="Images/blood-donation.png">
+  <title>Blood Stock</title>
+
+  <style>
+    .xyz {
+      display: table;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!--start navbar-->
+  <div class="bs-example">
+    <nav style="background-color: #FF0018;" class="navbar navbar-expand-md navbar-dark fixed-top">
+      <a href="home.html" class="navbar-brand"><i class="fas fa-heartbeat"></i>Blood Bank Management</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--end navbar-->
+
+
+  <!--Start SideBar-->
+
+
+  <br>
+  <div class="wrapper">
+    <div class="sidebar">
+      <ul>
+        <li><a style="text-decoration:none;" href="home.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a style="text-decoration:none;" href="donerAdmin.html"><i class="fas fa-user"></i>Donor</a></li>
+        <li><a style="text-decoration:none;" href="patient.html"><i class="fas fa-user-injured"></i>Patient</a></li>
+        <li><a style="text-decoration:none;" href="donation.html"><i
+              class="fas fa-hand-holding-medical"></i>Donations</a></li>
+        <li><a style="text-decoration:none;" href="bloodRequests.html"><i class="fas fa-sync-alt"></i>Blood Requests</a>
+        </li>
+        <li><a style="text-decoration:none;" href="requesthistory.html"><i class="fas fa-history"></i>Request
+            History</a></li>
+        <li><a style="text-decoration:none;" href="bloodStock.html"><i class="fas fa-hand-holding-water"></i>Blood
+            Stock</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!--End SideBar-->
+  <br><br><br><br>
+
+  <div class="container">
+    <h3 class="text-center" style="color: #FF0018; font-weight: bold;">Blood Stock</h3>
+    <hr class="hr">
+    <div class="bloodgroup">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="A+">
+              <div class="blood">
+                <h2>A+ <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="a+val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="B+">
+              <div class="blood">
+                <h2>B+ <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="b+val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="O+">
+              <div class="blood">
+                <h2>O+ <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="o+val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="AB+">
+              <div class="blood">
+                <h2>AB+ <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="ab+val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="A-">
+              <div class="blood">
+                <h2>A- <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="a-val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="B-">
+              <div class="blood">
+                <h2>B- <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="b-val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="O-">
+              <div class="blood">
+                <h2>O- <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="o-val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body" id="AB-">
+              <div class="blood">
+                <h2>AB- <i class="fas fa-tint" style="font-size:30px;color:red"></i></h2>
+              </div><br><br>
+              <div class="ChangeInput">
+                <input type="number" id="ab-val" name="a+unit" value="0" readonly class="bg-light">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr class="hr">
+    <br>
+    <h3 class="text-center">Update Blood Unit</h3><br>
+    <div class="xyz">
+      <form class="form-inline" method="POST">
+        <div class="form-group mx-sm-3 mb-6">
+          <select name="bloodgroup" class="form-control" id="bloodgroup">
+            <option disabled="disabled" selected="selected">Choose Blood Group</option>
+            <option value="o+">O+</option>
+            <option value="o-">O-</option>
+            <option value="a+">A+</option>
+            <option value="a-">A-</option>
+            <option value="b+">B+</option>
+            <option value="b-">B-</option>
+            <option value="ab+">AB+</option>
+            <option value="ab-">AB-</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-3 mb-6">
+          <input type="number" id="unit" class="form-control" name="unit" placeholder="Unit">
+        </div>
+        <!-- <button type="submit" class="btn btn-primary mb-2" onclick="getvalue()">Update</button> -->
+        <input type="button" onclick="getvalue()" value="Update" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+
+
+
+  <script>
+    function getvalue() {
+      var type = document.getElementById('bloodgroup').value;
+      var conc = type + "val";
+      if (type == document.getElementById('bloodgroup').value) {
+        var x = Number(document.getElementById('unit').value);
+        var y = Number(document.getElementById(conc).value);
+        var z = x + y;
+        document.getElementById(conc).value = z;
+      }
+      else {
+        alert("Please choose BloodGroup");
+      }
+    }
+  </script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
